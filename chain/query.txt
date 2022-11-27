@@ -1,0 +1,6 @@
+Measure Selection_1 = IF(ISCROSSFILTERED(merics_1[Measure_1]),
+                        SWITCH( TRUE(),
+                                VALUES(merics_1[Measure_1]) = "IF%",[IF%],
+                                VALUES(merics_1[Measure_1]) = "OT%",[OT%],
+                                VALUES(merics_1[Measure_1]) = "OTIF%",[OTIF%],
+                                BLANK()),BLANK())
